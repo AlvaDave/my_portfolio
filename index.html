@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Python Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #3498db;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
 
+    <header>
+        <h1>Welcome to My Code Lab</h1>
+        <p>A collection of my Python projects and experiments.</p>
+    </header>
+
+    <div class="container">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            
+            <div class="card">
+                <h3>Data Scraper 3000</h3>
+                <p>A Python script using BeautifulSoup to extract real-time market data.</p>
+                <a href="https://github.com/YOUR_USERNAME/your-repo-name" class="btn">View Source Code</a>
+            </div>
+
+            <div class="card">
+                <h3>ML Predictor</h3>
+                <p>An implementation of Linear Regression to forecast housing prices using Scikit-Learn.</p>
+                <a href="#" class="btn">View Source Code</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
