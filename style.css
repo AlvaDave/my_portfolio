@@ -1,0 +1,147 @@
+/* Styling Variables */
+:root {
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --bg: #f4f7f6;
+    --text: #333;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* The Wrapper Link */
+.card-link {
+    text-decoration: none; /* Removes the underline from the whole box */
+    color: inherit;        /* Keeps text color from changing to blue */
+    display: block;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* The Card */
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--accent);
+}
+
+.card h3 {
+    margin: 15px 0;
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.tag {
+    background: #ebf5fb;
+    color: var(--accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.read-more {
+    margin-top: auto;
+    color: var(--accent);
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+/* Contact Styling */
+#contact { text-align: center; padding-top: 3rem; }
+.contact-links i { font-size: 2.5rem; margin: 0 20px; color: var(--primary); transition: 0.3s; }
+.contact-links i:hover { color: var(--accent); transform: scale(1.1); }
+hr { border: 0; height: 1px; background: #eee; margin-bottom: 3rem; }
+
+/* Dashboard Controls */
+.controls-panel {
+    background: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #d1d9e0;
+}
+
+.control-group label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.chart-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+download-container {
+    margin: 10px 0 25px 0;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    background-color: #27ae60; /* A nice "Data" green */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.btn-download:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
