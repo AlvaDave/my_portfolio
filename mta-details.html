@@ -55,5 +55,60 @@
         }
     </script>
 </body>
+<div class="container">
+        <h1>MTA Fare Growth Rate Analysis</h1>
+        
+        <div class="download-container">
+            <a href="https://raw.githubusercontent.com/AlvaDave/MTA-Inflation-Project/refs/heads/main/MTA%20Raw%20Data.csv" 
+               target="_blank" 
+               class="btn-download">
+                <i class="fas fa-file-download"></i> Download Raw Dataset (.csv)
+            </a>
+        </div>
+
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="fare_dropdown">Fare Type:</label>
+                <select id="fare_dropdown" onchange="updateChart()">
+                    <option value="base">Base Fare</option>
+                    <option value="weekly_fare">7 Day Unlimited </option>
+                    <option value="monthly_fare">30 Day Unlimited </option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <input type="checkbox" id="adjust_checkbox" onchange="updateChart()">
+                <label for="adjust_checkbox">Show Comprehensive Analysis (vs. Trend)</label>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <iframe id="chart_frame" src="base_nominal_trend.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        
+        <p><a href="index.html">← Back to Portfolio</a></p>
+    </div>
+
+    <script>
+        function updateChart() {
+            const fare = document.getElementById('fare_dropdown').value;
+            const isComprehensive = document.getElementById('adjust_checkbox').checked;
+            const frame = document.getElementById('chart_frame');
+
+            let fileName = "";
+
+            if (fare === "compare_all") {
+                // Logic for the master comparison files
+                fileName = isComprehensive ? "compare_all_adjusted.html" : "compare_all.html";
+            } else {
+                // Logic for your new specific suite:
+                // Nominal Trend (unchecked) vs Complete Analysis (checked)
+                fileName = isComprehensive ? `${fare}_complete_analysis.html` : `${fare}_nominal_trend.html`;
+            }
+            
+            frame.src = fileName;
+        }
+    </script>
+</body>
 </html>
 
