@@ -19,12 +19,12 @@
             <div class="control-group">
                 <label for="fare_dropdown_1">Fare Type:</label>
                 <select id="fare_dropdown_1" onchange="updateHistoricalChart()">
-                    <option value="compare_all">📊 Compare All Fares</option>
-                    <option value="base_fare">Base Fare</option>
-                    <option value="30unlimited">30 Day Unlimited</option>
-                    <option value="14unlimited">14 Day Unlimited</option>
-                    <option value="7unlimited">7 Day Unlimited</option>
-                    <option value="1unlimited">1 Day Unlimited</option>
+                    <option value="MTA_HTML/compare_all">📊 Compare All Fares</option>
+                    <option value="MTA_HTML/base_fare">Base Fare</option>
+                    <option value="MTA_HTML/30unlimited">30 Day Unlimited</option>
+                    <option value="MTA_HTML/14unlimited">14 Day Unlimited</option>
+                    <option value="MTA_HTML/7unlimited">7 Day Unlimited</option>
+                    <option value="MTA_HTML/1unlimited">1 Day Unlimited</option>
                 </select>
             </div>
 
@@ -35,7 +35,7 @@
         </div>
 
         <div class="chart-container">
-            <iframe id="chart_frame_1" src="compare_all.html" width="100%" height="500px" frameborder="0"></iframe>
+            <iframe id="chart_frame_1" src="MTA_HTML/compare_all.html" width="100%" height="500px" frameborder="0"></iframe>
         </div>
     </div>
 
@@ -48,20 +48,20 @@
             <div class="control-group">
                 <label for="fare_dropdown_2">Fare Type:</label>
                 <select id="fare_dropdown_2" onchange="updateGrowthChart()">
-                    <option value="base">Base Fare</option> 
-                    <option value="weekly_fare">7 Day Unlimited</option>
-                    <option value="monthly_fare">30 Day Unlimited</option>
+                    <option value="MTA_HTML/base">Base Fare</option> 
+                    <option value="MTA_HTML/weekly_fare">7 Day Unlimited</option>
+                    <option value="MTA_HTML/monthly_fare">30 Day Unlimited</option>
                 </select>
             </div>
 
             <div class="control-group">
                 <input type="checkbox" id="adjust_checkbox_2" onchange="updateGrowthChart()">
-                <label for="adjust_checkbox_2">Show Comprehensive Analysis (vs. Trend)</label>
+                <label for="adjust_checkbox_2">Show Adjusted Inflation in 2025 USD</label>
             </div>
         </div>
 
         <div class="chart-container">
-            <iframe id="chart_frame_2" src="base_nominal_trend.html" width="100%" height="600px" frameborder="0"></iframe>
+            <iframe id="chart_frame_2" src="MTA_HTML/base_nominal_trend.html" width="100%" height="600px" frameborder="0"></iframe>
         </div>
         
         <p><a href="index.html">← Back to Portfolio</a></p>
